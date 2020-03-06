@@ -1,0 +1,13 @@
+adwords:
+
+  # Google Ads account ID; didgits only, no dashes
+  client_customer_id: GOOGLE_ADS_ACCOUNT_ID
+
+  # OAuth2 credentials for Installed App.
+  # Refer to [Create a client ID and client secret](https://developers.google.com/adwords/api/docs/guides/authentication#create_a_client_id_and_client_secret).
+  client_id: CLIENT_ID
+  client_secret: CLIENT_SECRET
+
+  # Google Ads developer token.
+  # Refer to [Apply for access to the AdWords API](https://developers.google.com/adwords/api/docs/guides/signup#step-2).
+  developer_token: DEVELOPER_TOKEN
