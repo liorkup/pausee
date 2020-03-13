@@ -30,10 +30,11 @@ import sys
 import optparse
 import smtplib
 import time
-
+import logging
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+logger = logging.getLogger(__name__)
 
 def create_message(user, recipients, subject, body):
     msg = MIMEMultipart()
@@ -53,7 +54,7 @@ def send_mail(user, password, recipients, subject, body):
     server.login(user, password)
     server.sendmail(user, recipients, msg.as_string())
     server.close()
-    print('Sent email to %s' % (', '.join(recipients)))
+    logger.info('Sent email to %s' % (', '.join(recipients)))
 
 
 def parse_args():

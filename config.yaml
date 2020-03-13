@@ -1,26 +1,26 @@
-af_api_token: <8483w03a-...>
-app_ids:
-  - <com.my.app> # Android app id
-  - <id123456789> # iOS app id
-params: 
-  lookback: 30 #min
-  repeat: 30 #min
-  email_alert: 1000 
-  pause_camapaigns: 5000
+af_api_token: '9483d0aA-...'
+app_ids: # app ids
+  - 'com.game.me'
+  - 'id1234456789'
+params:
+  lookback: 30 # mintues
+  repeat: 30 # minutes
+  email_alert: 1000 # first_opens in lookback
+  pause_campaigns: 5000 # first_opens in lookback
   timezone: 'Asia/Jerusalem'
-  from: 22 # hour
-  to: 8 #hour. Can also be at the day later
-email:
-  email: <gmail user>
-  password: <gmail password>
+  from: 22 #hour
+  to: 8 #hour
+email: #gmail creds.
+  email: <user>
+  password: <pass>
   to: 
-    - <'mymemail@gmail.com'>
-    - <'corpemail@google.com'>
+    - 'user@gmail.com'
+    - 'user@company.com'
   messages:
     alert:
-      title: "[Pausee Alert] High install rate alert from Google Ads campaigns"
+      title: "[Pausee Alert] High install rate from Google Ads campaigns"
       body: "The number of installs from Google Ads was {} in the last {} minutes."
     mutate:  
-      title: "[Pausee Alert] Campaign mutated"
-      body: "Campaigns ids: {} status was change to {}.\n\nFailed to change Campaigns ids: {} status was change to {}."
+      title: "[Pausee Alert] Campaigns status changed"
+      body: "Campaigns status was change to {} for campaigns {}.\n\nFailed to change status to {} for campaigns: {}."
 
